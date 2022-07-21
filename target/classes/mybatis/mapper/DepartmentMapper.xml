@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--configuration core file-->
+<mapper namespace="com.seig.mapper.DepartmentMapper">
+
+    <select id="departments" resultType="Department">
+        select * from department
+    </select>
+
+    <select id="getDepartmentById" resultType="Department" parameterType="int">
+        select * from department where id = #{id}
+    </select>
+
+</mapper>
